@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kowope inventory system</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<style type="text/css">
+		img{
+			width: 160px;
+			height: 150px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2 align="center">KOWOPE INVENTORY SYSTEM</h2>
+		<table class="table table-border">
+			<thead>
+				<tr>
+					<th>S/N</th>
+					<th>P.Image</th>
+					<th>P.Name</th>
+					<th>Q.on Hand</th>
+					<th>Unit cost</th>
+					<th>Order</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td><img src="img/ago.png"> </td>
+					<td>wrist watch </td>
+					<td id="q1"></td>
+					<td id="cost1">12000</td>
+					<td><input oninput="disp1()" type="text" name="ago" id="order1"></td>
+					<td id="total1"></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><img src="img/bag.png"></td>
+					<td>Bags</td>
+					<td id="q2"></td>
+					<td id="cost2">8000</td>
+					<td><input oninput="disp2()" type="text" name="bag" id="order2"></td>
+					<td id="total2"></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td><img src="img/phone.png"></td>
+					<td>Phone</td>
+					<td id="q3"></td>
+					<td id="cost3">58000</td>
+					<td><input oninput="disp3()" type="text" name="phone" id="order3"></td>
+					<td id="total3"></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td><img src="img/laptop.png"></td>
+					<td>Laptop system</td>
+					<td id="q4"></td>
+					<td id="cost4">150000</td>
+					<td><input oninput="disp4()" type="text" name="laptop" id="order4"></td>
+					<td id="total4"></td>
+				</tr>if (f=="b") {document.getElementById('cover').src=document.getElementById('b1').src }
+				<tr>
+					<td>5</td>
+					<td><img src="img/vr.png"></td>
+					<td>3D VR</td>
+					<td id="q5"></td>
+					<td id="cost5">80000</td>
+					<td><input oninput="disp5()" type="text" name="vr" id="order5"></td>
+					<td id="total5"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td id="qtotal"></td>
+					<td id="costtotal"></td>
+					<td id="odtotal"></td>
+					<td id="total6"></td>
+				</tr>
+			</tbody>
+		</table> 
+	</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	function disp1() 
+	{
+		document.getElementById('q1').innerHTML=30-order1.value
+		document.getElementById('total1').innerHTML=order1.value*document.getElementById('cost1').innerHTML
+
+	}
+
+</script>
